@@ -122,7 +122,7 @@ def inference(images):
     Logits.
   """
   isLoad = False
-  model = vggnet_model.vggnet(isLoad)
+  model = vgg_model.vggnet(isLoad)
   softmax_linear = model.conv_network(images, 0.5)
   return softmax_linear
 
