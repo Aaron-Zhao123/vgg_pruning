@@ -66,7 +66,7 @@ class vggnet(object):
         conv5_3 = self.conv_layer(conv5_2, 'conv5_3', padding = 'SAME', prune = True)
         pool5 = self.maxpool(conv5_3, 'pool5', 2, 2, padding = 'SAME')
 
-        shape = int(np.prod(self.pool5.get_shape()[1:]))
+        shape = int(np.prod(pool5.get_shape()[1:]))
         print(shape)
         flattened = tf.reshape(pool5, [-1, shape])
         fc6 = self.fc_layer(flattened, 'fc6', prune = True)
