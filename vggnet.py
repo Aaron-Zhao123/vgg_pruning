@@ -13,7 +13,7 @@ import tensorflow as tf
 
 import preprocess_utility as ult
 from imagenet_data import ImagenetData
-import vggnet_model
+import vgg_model
 
 
 FLAGS = tf.app.flags.FLAGS
