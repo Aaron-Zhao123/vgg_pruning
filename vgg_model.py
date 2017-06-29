@@ -221,7 +221,7 @@ class vggnet(object):
             [512],
             [4096],
             [4096],
-            [1000]
+            [1001]
         ]
         self.weight_shapes = kernel_shapes
         self.biase_shapes = biase_shape
