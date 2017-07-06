@@ -1,7 +1,7 @@
 DATA_DIR=/local/scratch/ssd
-TRAIN_DIR=/local/scratch/yaz21/tmp
+TRAIN_DIR=/local/scratch/yaz21/tmp_vgg
 run: vgg_multi_gpu_train.py
-	python vgg_multi_gpu_train.py --num_preprocess_threads=4 --num_gpus=2 --train_dir=$(TRAIN_DIR) --data_dir=$(DATA_DIR)
+	CUDA_VISIBLE_DEVICES=2,3 python vgg_multi_gpu_train.py --num_preprocess_threads=4 --num_gpus=2 --train_dir=$(TRAIN_DIR) --data_dir=$(DATA_DIR)
 
 git-add:
 	git add -A
